@@ -4,41 +4,41 @@
     {
         static void Main(string[] args)
         {
-            Character character1 = new Character("Андрей", 300, 100, 1000, 1000, 200, 65);
-            Character character2 = new Character("Олег", 300, 100, 1000, 1000, 200, 65);
-            Character character3 = new Character("Даша", 300, 100, 1000, 1000, 200, 65);
+            Character[] characters = { new Character("Андрей", 300, 100, 1000, 1000, 200, 65), 
+                new Character("Олег", 300, 100, 1000, 1000, 200, 65), new Character("Даша", 300, 100, 1000, 1000, 200, 65) };
 
-            character1.ShowCharacteristics();
-            character2.ShowCharacteristics();
-            character3.ShowCharacteristics();
+            for (int i = 0; i < characters.Length; i++)
+            {
+                characters[i].ShowCharacteristics();
+            }
         }
     }
 
     class Character
     {
-        public string Name;
-        public int Damage;
-        public int Defence;
-        public int MaxHealth;
-        public int CurrentHealth;
-        public int Speed;
-        public int JumpHeight;
+        private string _name;
+        private int _damage;
+        private int _defence;
+        private int _maxHealth;
+        private int _currentHealth;
+        private int _speed;
+        private int _jumpHeight;
 
         public Character(string name, int damage, int defence, int maxHealth, int currentHealth, int speed, int jumpHeight)
         {
-            Name = name;
-            Damage = damage;
-            Defence = defence;
-            MaxHealth = maxHealth;
-            CurrentHealth = currentHealth;
-            Speed = speed;
-            JumpHeight = jumpHeight;
+            _name = name;
+            _damage = damage;
+            _defence = defence;
+            _maxHealth = maxHealth;
+            _currentHealth = currentHealth;
+            _speed = speed;
+            _jumpHeight = jumpHeight;
         }
 
         public void ShowCharacteristics()
         {
-            Console.WriteLine($"Имя персонажа: {Name}\nУрон: {Damage}\nБроня: {Defence}\nМакс. количество жизней: {MaxHealth}" +
-                $"\nТекущее количество жизней: {CurrentHealth}\nСкорость: {Speed}\nВысота прыжка: {JumpHeight}\n");
+            Console.WriteLine($"Имя персонажа: {_name}\nУрон: {_damage}\nБроня: {_defence}\nМакс. количество жизней: {_maxHealth}" +
+                $"\nТекущее количество жизней: {_currentHealth}\nСкорость: {_speed}\nВысота прыжка: {_jumpHeight}\n");
         }
     }
 }
