@@ -37,8 +37,8 @@
 
         public void ShowCharacteristics()
         {
-            Console.WriteLine($"Имя персонажа: {_name}\nУрон: {_damage}\nБроня: {_defence}\nМакс. количество жизней: {_maxHealth}" +
-                $"\nТекущее количество жизней: {_currentHealth}\nСкорость: {_speed}\nВысота прыжка: {_jumpHeight}\n");
+            Console.WriteLine($"Имя персонажа: {_name}\nУрон: {_damage}\nБроня: {_defence}\nЗдоровье: {_currentHealth} / {_maxHealth}" +
+                $"\nСкорость: {_speed}\nВысота прыжка: {_jumpHeight}\n");
         }
     }
 }
